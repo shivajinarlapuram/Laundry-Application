@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome page</title>
+
+    <style>
+        #blink {
+            font-size: 20px;
+            font-weight: bold;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+<body>
+<h1 style="text-align:center;color:blue" > Welcome to Navanirman Laundry Services</h1>
+<br>
+
+<br>
+<p id="blink">
+    Mega offer on DryCleaning upto 50% off
+</p>
+
+<br>
+<br>
+<br>
+<script type="text/javascript">
+        var blink =
+            document.getElementById('blink');
+
+        setInterval(function () {
+            blink.style.opacity =
+            (blink.style.opacity == 0 ? 1 : 0);
+        }, 1000);
+    </script>
+
+<form action="/TrousersInputPage">
+<label>Enter the name :</label><input type="text" name="name"/>
+<label>Enter the phone number :</label><input type="text" name="phno"/>
+<label>Enter the address :</label><input type="text" name="address"/><br>
+    <br>
+    <br>
+ <input type="checkbox">   <lable>I accept terms and conditions</lable><br>
+    <input type="submit" value="Click Here To Proceed"/>
+</form>
+</body>
+</html>

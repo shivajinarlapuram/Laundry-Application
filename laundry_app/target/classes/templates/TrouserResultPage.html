@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+
+    <meta charset="UTF-8">
+    <title>result page</title>
+</head>
+<body>
+<h1>Your Order is  accepted successfully</h1>
+
+<label> Your delivery  will be done  within 48 hours  from the pickup date   :</label><label th:text="${pickup}" /><br>
+<br>
+
+<h4>Payment can be done to the delivery boy at  the time of delivery </h4><br><br>
+
+<h1>Your Order Details</h1>
+<table border="2" >
+    <tr>
+        <th>Trouser Name</th>
+        <th>Type of wash</th>
+        <th>Quantity</th>
+        <th>AmountPerTrouser</th>
+        <th>Amount</th>
+    </tr>
+
+        <tr th:each ="trousers :${trouser}">
+         <td th:text="${trousers.trouserName}" />
+            <td th:text="${trousers.typeOfWash}" />
+         <td th:text="${trousers.quantity}" />
+
+         <td th:text="${trousers.rate}" />
+         <td th:text="${trousers.amount}" />
+
+    </tr>
+
+
+
+</table>
+<label>Total cost                   :</label> <label th:text="${total}" />
+<br>
+<br>
+
+<h5>Thank You for Ordering</h5>
+
+</body>
+</html>
